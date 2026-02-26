@@ -5,7 +5,7 @@ import { EpicFreeModel } from "../models/EpicFreeModel";
 @Component
 export struct DetailPage {
   // 接收上一页传递的参数
-  @Prop epicFree: EpicFreeModel = {
+  epicFree: EpicFreeModel = {
     id: "1",
     title: "初始化",
     cover: "",
@@ -22,12 +22,21 @@ export struct DetailPage {
   };
 
   build() {
-    Navigation() {
+    NavDestination() {
       Column() {
-        Text(this.epicFree.title)
+        Text(`${this.epicFree.title}`)
           .fontSize(20)
           .fontWeight(FontWeight.Bold)
           .padding(20)
+          .fontColor(Color.Black)
+
+        Divider()
+
+        Text(this.epicFree.description)
+          .fontSize(18)
+          .fontWeight(FontWeight.Normal)
+          .padding(20)
+          .fontColor(Color.Black)
 
         Divider()
 
@@ -35,13 +44,14 @@ export struct DetailPage {
           .fontSize(14)
           .fontColor('#007DFF')
           .padding(20)
+          .fontColor(Color.Black)
       }
-      .width('100%')
-      .height('100%')
       .backgroundColor(Color.White)
 
     }
+    .width('100%')
+    .height('100%')
     .title('详情页') // 二级页面标题
-    .titleMode(NavigationTitleMode.Mini)
+
   }
 }
