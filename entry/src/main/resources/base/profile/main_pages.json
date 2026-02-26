@@ -1,0 +1,12 @@
+{
+  "src": [
+    "pages/Index",
+    "views/SplashPage",
+    "views/MainPage",
+    "views/HomePage",
+    "views/DetailPage",
+    "views/DiscoverPage",
+    "views/MessagePage",
+    "views/ProfilePage"
+  ]
+}
